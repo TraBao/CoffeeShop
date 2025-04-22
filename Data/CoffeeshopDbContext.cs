@@ -6,8 +6,7 @@ namespace Coffee.Data
 {
     public class CoffeeshopDbContext : DbContext
     {
-        public CoffeeshopDbContext(DbContextOptions<CoffeeshopDbContext> options) :
-       base(options)
+        public CoffeeshopDbContext(DbContextOptions<CoffeeshopDbContext> options) :base(options)
         { }
         public DbSet<Product> Products { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

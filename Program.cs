@@ -1,10 +1,17 @@
-using coffeeshop.Data;
+using Coffee.Data;
+using Coffee.Models.Interface;
+using coffeeshop.Models.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped <IProductRepository, ProductRepository>();
+
+builder.Services.AddDbContext<CoffeeshopDbContext>(option =>
+option.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeShopDbContextConnection")));
 
 var app = builder.Build();
 
@@ -28,5 +35,3 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
-builder.Services.AddDbContext<CoffeeshopDbContext>(option =>
-option.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeShopDbContextConnection")));
