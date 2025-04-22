@@ -1,3 +1,6 @@
+using coffeeshop.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -25,3 +28,5 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+builder.Services.AddDbContext<CoffeeshopDbContext>(option =>
+option.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeShopDbContextConnection")));
