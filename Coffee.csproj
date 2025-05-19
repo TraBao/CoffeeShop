@@ -7,6 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\Coffee Shop Template\assets\.vs\assets\v17\DocumentLayout.backup.json" />
+    <Content Include="wwwroot\Coffee Shop Template\assets\.vs\assets\v17\DocumentLayout.json" />
+    <Content Include="wwwroot\Coffee Shop Template\assets\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Coffee Shop Template\assets\.vs\assets\CopilotIndices\17.13.444.19527\CodeChunks.db" />
+    <None Include="wwwroot\Coffee Shop Template\assets\.vs\assets\CopilotIndices\17.13.444.19527\SemanticSymbols.db" />
+    <None Include="wwwroot\Coffee Shop Template\assets\.vs\assets\FileContentIndex\924b670f-cec4-4c66-8109-54b72480c3f6.vsidx" />
+    <None Include="wwwroot\Coffee Shop Template\assets\.vs\slnx.sqlite" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.4">
