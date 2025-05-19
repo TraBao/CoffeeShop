@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Coffee Shop</title>
@@ -6,5 +7,15 @@
 <body>
 	<h1>Shop Coffee</h1>
 </body>
+<div> class="container"> 
+@foreach (var item in Model) 
+{ 
+<div> class="single-product"> 
+<img width="100" src="@item.ImageUrl" /> 
+<a asp-controller="Products" asp-action="Detail" asp-route-id="@item.Id" target="_blank"><h3> @item.Name</h3></a> 
+<p> @item.Price.ToString("C") </p> 
+</div> 
+} 
+</div>
 </html>
 

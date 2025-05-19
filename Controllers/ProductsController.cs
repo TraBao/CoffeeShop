@@ -17,5 +17,14 @@ namespace Coffee.Controllers
           {
                 return View();
           }
+        public IActionResult Detail(int id)
+        {
+            var product = _productRepository.GetProductDetail(id);
+            if (product != null)
+            {
+                return View(product);
+            }
+            return NotFound();
         }
+    }
 }
